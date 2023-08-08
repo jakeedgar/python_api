@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# macOS metadata files
+.DS_Store
+
+# Python virtual environments
+venv/
+.env/
+
+# Compiled Python files
+*.pyc
+
+# Jupyter Notebook temporary files
+.ipynb_checkpoints/
+
+# Local development settings
+*.env
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Editor-specific temp files
+*~
+*.swp
+*.swo
+*.bak
