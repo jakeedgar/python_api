@@ -96,13 +96,15 @@ def get_user_by_id(user_id):
 
     return user
 
-
 def update_user(user):
     updated_user = {}
     try:
         conn = connect_to_db()
         cur = conn.cursor()
-        cur.execute("UPDATE users SET name = ?, email = ?, phone = ?, address = ?, country = ? WHERE user_id =?", (user["name"], user["email"], user["phone"], user["address"], user["country"], user["user_id"],))
+        cur.execute("UPDATE users SET name = ?, email = ?, phone = ?, address = ?, country = ? WHERE user_id =?",  
+                     (user["name"], user["email"], user["phone"], 
+                     user["address"], user["country"], 
+                     user["user_id"],))
         conn.commit()
         #return the user
         updated_user = get_user_by_id(user["user_id"])
@@ -114,6 +116,7 @@ def update_user(user):
         conn.close()
 
     return updated_user
+
 
 
 def delete_user(user_id):
@@ -198,6 +201,8 @@ def api_add_user():
 def api_update_user():
     user = request.get_json()
     return jsonify(update_user(user))
+
+
 
 @app.route('/api/users/delete/<user_id>',  methods = ['DELETE'])
 def api_delete_user(user_id):
