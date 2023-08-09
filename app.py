@@ -2,6 +2,22 @@
 import sqlite3
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import json
+
+# Specify the path to your JSON file
+json_file_path = "users.json"
+
+# Open and read the JSON file
+with open(json_file_path, "r") as json_file:
+    data = json.load(json_file)
+
+# Now, 'data' contains the contents of the JSON file as a Python dictionary or list, depending on the JSON structure
+print(data)
+
+
+
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 
 def connect_to_db():
@@ -180,9 +196,6 @@ for i in users:
 
 
 
-
-app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/api/users', methods=['GET'])
 def api_get_users():

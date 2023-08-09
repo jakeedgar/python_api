@@ -1,0 +1,30 @@
+[
+  {
+      "name": "Charles Effiong",
+      "email": "charles@gamil.com",
+      "phone": "067765665656",
+      "address": "Lui Str, Innsbruck",
+      "country": "Austria"
+  },
+  {
+      "name": "Sam Adebanjo",
+      "email": "samadebanjo@gamil.com",
+      "phone": "098765465",
+      "address": "Sam Str, Vienna",
+      "country": "Austria"
+  },
+  {
+      "name": "John Doe",
+      "email": "johndoe@gamil.com",
+      "phone": "067765665656",
+      "address": "John Str, Linz",
+      "country": "Austria"
+  },
+  {
+    "name": "Mary James",
+    "email": "maryjames@gamil.com",
+    "phone": "09878766676",
+    "address": "AYZ Str, New york",
+    "country": "United states"
+  }
+]
